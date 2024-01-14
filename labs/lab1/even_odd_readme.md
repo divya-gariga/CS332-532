@@ -13,7 +13,7 @@ gcc -o even_odd even_odd.c
 
 ```bash
 .\even_odd.exe
-#in Windows run the executable as follows
+#in Windows run the executable as shown
 ```
 
 # Code Description
@@ -30,10 +30,10 @@ gcc -o even_odd even_odd.c
 ### Main Function:
 
 **int main()**: The main function is the entry point of the program.
-It Declares an integer variable given_number to store the user input.
-**printf("enter a number: ");** : Prompts the user to enter a number.
-**scanf("%d", &given_number);** : Reads the user input and stores it in the variable given_number.
-**if(isEven(given_number))** : Calls the isEven function with the user-provided number as an argument. If the result is true, it executes the block inside, indicating that the number is even.
+It Declares an integer variable given_number to store the user input. \
+**printf("enter a number: ");** : Prompts the user to enter a number. \
+**scanf("%d", &given_number);** : Reads the user input and stores it in the variable given_number. \
+**if(isEven(given_number))** : Calls the isEven function with the user-provided number as an argument. If the result is true, it executes the block inside, indicating that the number is even. \
 else: If the result is false, it executes the block inside, indicating that the number is odd.
 
 # Output screenshots
