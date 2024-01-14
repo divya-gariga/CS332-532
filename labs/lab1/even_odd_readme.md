@@ -41,7 +41,7 @@ else: If the result is false, it executes the block inside, indicating that the 
 
 # github link
 
-[Github link](https://google.com)
+[Github link](https://github.com/divya-gariga/CS332-532/tree/main/labs/lab1)
 
 # References
 I have referred lab1 resources provided for my lab assignment 
