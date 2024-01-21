@@ -39,7 +39,7 @@ Finally after the insertion sort it prints the sorted array.
 ![Alt text](image.png)
 
 # github link
-[Github link]()
+[Github link](https://github.com/divya-gariga/CS332-532/tree/main/labs/lab2)
 
 # References
 I have referred lab2 resources provided for my lab assignment 
