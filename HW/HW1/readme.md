@@ -121,9 +121,9 @@ After the loop completes, the function returns the final count, which represents
 The code defines a function named arrayDetails that performs various operations on an array of 6 integers. The function calculates and prints the minimum value, the index of the minimum value, the mean (average) of the array, the maximum value, and the index of the maximum value.
 
 # Output screenshots
-![Alt text](image-1.png)
+![Alt text](image.png)
 
 # github link
-[Github link]()
+[Github link](https://github.com/divya-gariga/CS332-532/tree/main/HW/HW1)
 
 # References
