@@ -1,0 +1,1 @@
+fread file contents
