@@ -2,7 +2,7 @@
 Name: Divya Gariga, Vaishnavi Panchalingala
 BlazerId: DGARIGA, vpancha2
 Project #: HW4
-To compile: gcc queue.c -pthread ./mysched.c
+To compile: gcc queue.c -pthread ./dgariga_and_vpancha2_HW04.c
 program> To run: ./a.out 2
 */
 
