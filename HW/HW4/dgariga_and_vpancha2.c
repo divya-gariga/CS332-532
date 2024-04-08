@@ -1,6 +1,6 @@
-*
-Name: Divya Gariga
-BlazerId: DGARIGA
+/*
+Name: Divya Gariga, Vaishnavi Panchalingala
+BlazerId: DGARIGA, vpancha2
 Project #: HW4
 To compile: gcc queue.c -pthread ./mysched.c
 program> To run: ./a.out 2
@@ -19,10 +19,11 @@ program> To run: ./a.out 2
 #define MAX_JOBS_LEN 1000
 
 queue *q;
-int p;
+int p=1; 
 Job jobs[MAX_JOBS_LEN];
 int running_jobs_count = 0;
 
+//function to get current date and time
 time_t getCurrentDateTime()
 {
     time_t current_time;
@@ -64,7 +65,6 @@ void *execute_job(void *arg)
 
         // Execute the command
         execvp(job->command, argv);
-
         // If execvp fails, print error and exit
         perror("execvp");
         exit(EXIT_FAILURE);
@@ -74,13 +74,13 @@ void *execute_job(void *arg)
         // Wait for the child process to terminate
         int status;
         wait(&status);
-        job->end_time = getCurrentDateTime();
 
         if (!WIFEXITED(status))
         {
             fprintf(stderr, "Child process %d did not terminate normally!\n", pid);
         }
-        job->status = "complete"; // Update job status
+        job->end_time = getCurrentDateTime();
+        job->status = "success"; // Update job status
     }
     else
     { // Error
@@ -89,26 +89,29 @@ void *execute_job(void *arg)
     --running_jobs_count;
 }
 
+//function to show running or waiting jobs
 void show_jobs(int n)
 {
     printf(" Jobid \t command \t status:\n");
     for (int i = 0; i < n; i++)
     {
-        if (strcmp(jobs[i].status, "complete") != 0)
+        if (strcmp(jobs[i].status, "success") != 0)
             printf("%d \t %s \t  %s \t %s\n", jobs[i].job_id, jobs[i].command, jobs[i].arguments, jobs[i].status);
     }
 }
 
+//function to show the submit history
 void submit_history(int n)
 {
     printf(" Jobid \t command starttime \t endtime \t status:\n");
     for (int i = 0; i < n; i++)
     {
-        if (strcmp(jobs[i].status, "complete") == 0)
+        if (strcmp(jobs[i].status, "success") == 0)
             printf("%d \t %s %s \t %s \t %s \t %s\n", jobs[i].job_id, jobs[i].command, jobs[i].arguments, strtok(ctime(&(jobs[i].start_time)), "\n"), strtok(ctime(&(jobs[i].end_time)), "\n"), jobs[i].status);
     }
 }
 
+//function to create a new job
 Job create_job(char *command, char *arguments, int jobId)
 {
     Job new_job;
@@ -146,7 +149,9 @@ void *job_manager(void *arg)
 int main(int argc, char *argv[])
 {
     int i = 0;
-    if (argc != 2 || atoi(argv[1]) > 8)
+    if (argc != 2){
+        p=1;
+    } else if (atoi(argv[1]) > 8)
     {
         p = 8;
     }
@@ -162,7 +167,6 @@ int main(int argc, char *argv[])
 
     printf("Welcome to the job scheduler.\n");
     printf("Enter commands (submit, showjobs, submithistory):\n");
-
     while (1)
     {
         char input[100];

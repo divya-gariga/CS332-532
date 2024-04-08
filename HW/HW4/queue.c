@@ -1,3 +1,12 @@
+/*
+Name: Divya Gariga, Vaishnavi Panchalingala
+BlazerId: DGARIGA, vpancha2
+Project #: HW4
+To compile: gcc queue.c -pthread ./mysched.c
+program> To run: ./a.out 2
+*/
+
+
 /* Implementation of a simple circular queue using a static array */
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,3 +1,11 @@
+/*
+Name: Divya Gariga, Vaishnavi Panchalingala
+BlazerId: DGARIGA, vpancha2
+Project #: HW4
+To compile: gcc queue.c -pthread ./mysched.c
+program> To run: ./a.out 2
+*/
+
 /* Header file for the simple circular queue example */
 #ifndef __QUEUE_H__
 #define __QUEUE_H__
