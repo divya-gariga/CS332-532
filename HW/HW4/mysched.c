@@ -1,3 +1,11 @@
+*
+Name: Divya Gariga
+BlazerId: DGARIGA
+Project #: HW4
+To compile: gcc queue.c -pthread ./mysched.c
+program> To run: ./a.out 2
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
