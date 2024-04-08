@@ -7,7 +7,7 @@ This is the README file home work assignment 4
 
 ```bash
 make 
-# this will compile the dgariga_HW03.c file and return an executable with the executable name search.exe
+# this will compile the dgariga_and_vpancha2_HW04.c file and return an executable with the executable name mysched.exe
 ```
 # Run Instructions
 
@@ -16,14 +16,23 @@ make run ARGS="3"
 #in Windows run the executable as shown
 ```
 
+### Division of Assignment work:
+
+### Divya Gariga : 
+1.**Implementing the job scheduler:**
+   Integrated the queue,and implemented job manager function which continuously checks the queue for pending jobs and executes them concurrently.
+
+2.**Implementing the commands(submit):**
+  implemented the submit command flow, by creating job, inserting it into the queue, and creating the process by using **execute_job** function.
+
+### Vaishnavi Panchalingala: 
+1.**Parsing and interpreting the commands (including command-line arguments)**: implement the main loop for handling user input commands.
+2.**Implementing the commands(show_jobs,submit_history):**
+  Developed the show_jobs, submit_history functions
+
 # Code Description
 
 ### Functions :
-
-### Division of Assignment work:
-
-Divya Gariga : 
-Vaishnavi Panchalingala: 
 
 1. **getCurrentDateTime()**: This function returns the current date and time.
 
